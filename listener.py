@@ -1,12 +1,12 @@
 import time
 import speech_recognition as sr
 
-def listen_for_speech():
+def listen_for_speech(react_msg: str):
     # Take audio from the microphone
     r = sr.Recognizer()
 
     with sr.Microphone() as source:
-        print("listening for speech...")
+        print(react_msg)
         audio = r.listen(source)
 
     # Print the audio as text

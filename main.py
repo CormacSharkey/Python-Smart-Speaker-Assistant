@@ -5,4 +5,4 @@ import listener
 
 
 if __name__ == "__main__":
-    print(listener.listen_for_speech())
+    print(listener.listen_for_speech("listening to you..."))
