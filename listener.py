@@ -1,4 +1,3 @@
-import time
 import speech_recognition as sr
 
 def listen_for_speech(react_msg: str):
