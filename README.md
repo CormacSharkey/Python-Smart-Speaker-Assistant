@@ -4,7 +4,7 @@
 
 [This is how to add a comment]: # 
 
-This project is broken down into two main components: the **listener** and the **speaker**.
+This project has three main components: the **listener**, the **speaker**, and the **assistant**.
 
 ## Listener 
 [listener.py](listener.py)
@@ -19,3 +19,9 @@ The speaker takes a text string and returns speech audio of the given text.
 It contains the following functions:
 - **speak_text(_text_: str)**
 - **save_text(_text_: str, _filename_: str)**
+
+
+## Assistant 
+[assistant.py](assistant.py)
+The assistant runs the main event loop, which calls on the listener for spoken commands and uses the speaker to respond with speech.
+- **nametag**: _used as the trigger for the assistant to accept commands_
