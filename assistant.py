@@ -5,12 +5,13 @@ import human_readable as hr
 
 nametag = "Sherlock"
 
-while True:
-    speech = ls.listen_for_speech("listening for you...", "whisper")
+def eventLoop():
+    while True:
+        speech = ls.listen_for_speech("listening for you...", "whisper")
 
-    if speech != None and nametag.casefold() in speech:
-        if "what time is it" in speech:
-            now = dt.datetime.now()
-            sp.speak_text("It is " + hr.timing(now, formal=False) + ".")
+        if speech != None and nametag.casefold() in speech:
+            if "what time is it" in speech:
+                current_time = dt.datetime.now()
+                sp.speak_text("It is " + hr.timing(current_time, formal=False) + ".")
 
     
